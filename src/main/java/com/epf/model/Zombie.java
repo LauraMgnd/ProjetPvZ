@@ -24,6 +24,16 @@ public class Zombie {
         this.cheminImage = cheminImage;
         this.idMap = idMap;
     }
+    public Zombie(String nom, int pointDeVie, double attaqueParSeconde,
+                  int degatAttaque, double vitesseDeDeplacement, String cheminImage, int idMap) {
+        this.nom = nom;
+        this.pointDeVie = pointDeVie;
+        this.attaqueParSeconde = attaqueParSeconde;
+        this.degatAttaque = degatAttaque;
+        this.vitesseDeDeplacement = vitesseDeDeplacement;
+        this.cheminImage = cheminImage;
+        this.idMap = idMap;
+    }
 
     public int getIdZombie() { return idZombie; }
     public void setIdZombie(int idZombie) { this.idZombie = idZombie; }

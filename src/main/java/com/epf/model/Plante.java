@@ -26,6 +26,17 @@ public class Plante {
         this.effet = effet;
         this.cheminImage = cheminImage;
     }
+    public Plante(String nom, int pointDeVie, double attaqueParSeconde,
+                  int degatAttaque, int cout, double soleilParSeconde, String effet, String cheminImage) {
+        this.nom = nom;
+        this.pointDeVie = pointDeVie;
+        this.attaqueParSeconde = attaqueParSeconde;
+        this.degatAttaque = degatAttaque;
+        this.cout = cout;
+        this.soleilParSeconde = soleilParSeconde;
+        this.effet = effet;
+        this.cheminImage = cheminImage;
+    }
 
     public int getIdPlante() {
         return idPlante;

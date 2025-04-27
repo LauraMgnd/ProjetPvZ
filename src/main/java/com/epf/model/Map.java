@@ -15,6 +15,11 @@ public class Map {
         this.colonne = colonne;
         this.cheminImage = cheminImage;
     }
+    public Map(int ligne, int colonne, String cheminImage) {
+        this.ligne = ligne;
+        this.colonne = colonne;
+        this.cheminImage = cheminImage;
+    }
 
     public int getIdMap() {
         return idMap;
