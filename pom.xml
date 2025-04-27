@@ -93,6 +93,14 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Spring Boot Starter Web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>3.3.3</version>
+            <scope>test</scope>
+        </dependency>
+
 
 
         <!-- Logging (optionnel, mais recommandé) -->
