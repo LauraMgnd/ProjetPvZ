@@ -1,5 +1,6 @@
 package com.epf.dao;
 
+import com.epf.model.Map;
 import com.epf.model.Zombie;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,10 +16,12 @@ import java.util.Optional;
 public class ZombieDAOImpl implements ZombieDAO {
 
     private final JdbcTemplate jdbcTemplate;
+    private final MapDAOImpl mapDao;
 
     @Autowired
-    public ZombieDAOImpl(JdbcTemplate jdbcTemplate) {
+    public ZombieDAOImpl(JdbcTemplate jdbcTemplate, MapDAOImpl mapDao) {
         this.jdbcTemplate = jdbcTemplate;
+        this.mapDao = mapDao;
     }
 
     // RowMapper pour convertir les lignes SQL en objets Zombie
@@ -35,6 +38,13 @@ public class ZombieDAOImpl implements ZombieDAO {
 
     @Override
     public void create(Zombie zombie) {
+        // vérifier que la map existe avant d'insérer le zombie
+        Optional<Map> mapExistante = mapDao.readById(zombie.getIdMap());
+
+        if (mapExistante.isEmpty()) {
+            throw new IllegalArgumentException("La carte avec l'id " + zombie.getIdMap() + " n'existe pas.");
+        }
+
         String sql = """
                 INSERT INTO zombie 
                 (nom, point_de_vie, attaque_par_seconde, degat_attaque, vitesse_de_deplacement, chemin_image, id_map)
@@ -64,6 +74,13 @@ public class ZombieDAOImpl implements ZombieDAO {
 
     @Override
     public void update(Zombie newZombieData) {
+        // vérifier que la map existe avant de modifier le zombie
+        Optional<Map> mapExistante = mapDao.readById(newZombieData.getIdMap());
+
+        if (mapExistante.isEmpty()) {
+            throw new IllegalArgumentException("La carte avec l'id " + newZombieData.getIdMap() + " n'existe pas.");
+        }
+
         String sql = """
                 UPDATE zombie SET 
                 nom = ?, 
@@ -96,5 +113,11 @@ public class ZombieDAOImpl implements ZombieDAO {
     public List<Zombie> readByMapId(int idMap) {
         String sql = "SELECT * FROM zombie WHERE id_map = ?";
         return jdbcTemplate.query(sql, zombieRowMapper, idMap);
+    }
+
+    @Override
+    public void deleteByMapId(int idMap) {
+        String sql = "DELETE FROM zombie WHERE id_map = ?";
+        jdbcTemplate.update(sql, idMap);
     }
 }

@@ -11,4 +11,6 @@ public interface ZombieService {
     void updateZombie(Zombie zombie);
     void deleteZombieById(Integer idZombie);
     List<Zombie> readZombiesByMapId(int idMap);
+
+    void deleteZombiesByMapId(int idMap);
 }
