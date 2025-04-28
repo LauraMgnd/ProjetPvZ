@@ -12,6 +12,7 @@ com\epf\service\MapService.class
 com\epf\controller\ZombieController.class
 com\epf\mapper\ZombieMapper.class
 com\epf\service\PlanteService.class
+com\epf\exception\GlobalExceptionHandler.class
 com\epf\dao\PlanteDAOImpl.class
 com\epf\config\CorsFilter.class
 com\epf\model\Plante.class
@@ -25,5 +26,6 @@ com\epf\model\Map.class
 com\epf\controller\PlanteController.class
 com\epf\service\ZombieServiceImpl.class
 com\epf\dto\PlanteDto.class
+com\epf\exception\EntityNotFoundException.class
 com\epf\Main.class
 com\epf\model\Zombie.class

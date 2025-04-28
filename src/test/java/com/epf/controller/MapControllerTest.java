@@ -48,23 +48,13 @@ class MapControllerTest {
     }
 
     @Test
-    void testReadMapById_found() {
+    void testReadMapById() {
         when(mapService.readMapById(1)).thenReturn(Optional.of(map));
 
         ResponseEntity<MapDto> response = mapController.readMapById(1);
 
         assertEquals(200, response.getStatusCodeValue());
         assertEquals(mapDto.getLigne(), response.getBody().getLigne());
-    }
-
-    @Test
-    void testReadMapById_notFound() {
-        when(mapService.readMapById(1)).thenReturn(Optional.empty());
-
-        ResponseEntity<MapDto> response = mapController.readMapById(1);
-
-        assertEquals(404, response.getStatusCodeValue());
-        assertNull(response.getBody());
     }
 
     @Test

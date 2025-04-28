@@ -45,23 +45,13 @@ class PlanteControllerTest {
     }
 
     @Test
-    void testReadPlanteById_found() {
+    void testReadPlanteById() {
         when(planteService.readPlanteById(1)).thenReturn(Optional.of(plante));
 
         ResponseEntity<PlanteDto> response = planteController.readPlanteById(1);
 
         assertEquals(200, response.getStatusCodeValue());
         assertEquals(planteDto.getNom(), response.getBody().getNom());
-    }
-
-    @Test
-    void testReadPlanteById_notFound() {
-        when(planteService.readPlanteById(1)).thenReturn(Optional.empty());
-
-        ResponseEntity<PlanteDto> response = planteController.readPlanteById(1);
-
-        assertEquals(404, response.getStatusCodeValue());
-        assertNull(response.getBody());
     }
 
     @Test

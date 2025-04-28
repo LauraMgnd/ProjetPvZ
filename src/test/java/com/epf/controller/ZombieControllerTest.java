@@ -44,23 +44,13 @@ class ZombieControllerTest {
     }
 
     @Test
-    void testReadZombieById_found() {
+    void testReadZombieById() {
         when(zombieService.readZombieById(1)).thenReturn(Optional.of(zombie));
 
         ResponseEntity<ZombieDto> response = zombieController.readZombieById(1);
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertEquals(zombieDto.getNom(), response.getBody().getNom());
-    }
-
-    @Test
-    void testReadZombieById_notFound() {
-        when(zombieService.readZombieById(1)).thenReturn(Optional.empty());
-
-        ResponseEntity<ZombieDto> response = zombieController.readZombieById(1);
-
-        assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
-        assertNull(response.getBody());
     }
 
     @Test

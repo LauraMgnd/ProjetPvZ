@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: com.epf.dao.PlanteDAOTest
+Test set: com.epf.mapper.PlanteMapperTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.049 s -- in com.epf.dao.PlanteDAOTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in com.epf.mapper.PlanteMapperTest

@@ -3,6 +3,7 @@
 Ce projet implémente un backend API RESTful pour le jeu **Plants vs Zombies**. Il permet de gérer les entités `Zombies`, `Plantes` et `Maps` à travers des opérations CRUD (Create, Read, Update, Delete). Ce backend communique avec une base de données MySQL via JdbcTemplate et est construit avec **Spring MVC**.
 
 ---
+
 ## Objectif
 
 Le but de ce projet est de créer l'API backend nécessaire pour faire fonctionner le jeu **Plants vs Zombies**. Le backend doit gérer les entités du jeu suivantes :
@@ -14,6 +15,7 @@ Le but de ce projet est de créer l'API backend nécessaire pour faire fonctionn
 L'application backend permet de gérer la création, la modification, la suppression et la récupération des entités via des endpoints RESTful. L'intégration avec le frontend est effectuée via des requêtes HTTP pour permettre à l'utilisateur de manipuler les données du jeu (ajouter des zombies, modifier des cartes, etc.).
 
 ---
+
 ## Technologies utilisées
 
 - **Langage** : Java 21
@@ -26,8 +28,11 @@ L'application backend permet de gérer la création, la modification, la suppres
 - **Format de données** : JSON
 - **Outils de tests** : JUnit, H2, Mockito
 - **Configuration** : CORS et configuration manuelle de Spring MVC avec XML (web.xml, dispatcher-servlet.xml)
+- **Spring Boot Starter Validation** : Pour la validation des DTOs avec `@Valid`
+
 
 ---
+
 ## Fonctionnalités implémentées
 
 - **Gestion des entités Zombies, Plantes, et Maps** via des endpoints CRUD.
@@ -35,10 +40,14 @@ L'application backend permet de gérer la création, la modification, la suppres
 - **Suppression de zombies associés à une map** : Lorsqu'une **Map** est supprimée, tous les **Zombies** associés à cette map sont également supprimés.
 
 
+- **Gestion des exceptions** : Implémentation d'une gestion centralisée des exceptions pour gérer les erreurs de manière cohérente dans toute l'application.
+- **Validation des données** : Utilisation des mécanismes de validation avancée de Spring pour garantir que les données envoyées sont correctes avant d'effectuer des opérations (par exemple, validation des champs des entités via des annotations comme `@NotNull`, `@Size`, etc.).
+
 - **Architecture en couches** : Le projet suit l'architecture en couches classique avec un modèle **Controller → Service → DAO → Model**.
 - **Sécurisation CORS** : Configuré pour permettre les appels API depuis le frontend React sur `http://localhost:5173`.
 
 ---
+
 ## Endpoints disponibles
 
 ### **Plantes**
@@ -63,6 +72,7 @@ L'application backend permet de gérer la création, la modification, la suppres
 - **DELETE /maps/{id}** : Supprime une map (tous les zombies associés sont également supprimés)
 
 ---
+
 ## Tests
 
 Les tests sont réalisés avec **JUnit** et **Mockito** pour tester les services et les DAO.
@@ -84,13 +94,13 @@ L'application utilise **MySQL** comme base de données et **JdbcTemplate** pour 
 
 ## Démarrer Tomcat
 
-Générez le fichier `.war`** avec Maven :
+Générez le fichier `.war` avec Maven :
 
     mvn clean package
     
 Placez le fichier `.war` dans le dossier `webapps` de Tomcat.
 
-Démarrez Tomcat.** Un dossier avec le même nom que votre `.war` sera créé dans `webapps`.
+Démarrez Tomcat. Un dossier avec le même nom que votre `.war` sera créé dans `webapps`.
 Accédez à l'application** via l'URL suivante :
 
     http://localhost:8080/CoursEpfBack

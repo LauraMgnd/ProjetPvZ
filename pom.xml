@@ -38,26 +38,27 @@
             <version>${spring.version}</version>
         </dependency>
 
-        <!-- Spring Test -->
+
+        <!-- Spring Boot Starter Validation: pour la validation des DTOs avec @Valid -->
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>${spring.version}</version>
-            <scope>test</scope>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+            <version>3.3.4</version>
         </dependency>
 
         <!-- Database Driver (Exemple: MySQL Connector) -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.33</version> <!-- Dernière version stable -->
+            <version>8.0.33</version>
         </dependency>
+
 
         <!-- Jackson pour la manipulation de JSON -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version> 2.18.2</version>
+            <version>2.18.2</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
@@ -68,8 +69,7 @@
         </dependency>
 
 
-
-        <!-- JUnit 5 -->
+        <!-- JUnit 5: pour les tests unitaires -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -77,7 +77,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- H2 pour base de données mémoire -->
+        <!-- H2: pour une base de données en mémoire -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -85,7 +85,7 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Mockito -->
+        <!-- Mockito: pour la simulation d'objets lors des tests unitaires -->
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
@@ -93,7 +93,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Spring Boot Starter Web -->
+        <!-- Spring Boot Starter Test: pour les tests Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -102,12 +102,11 @@
         </dependency>
 
 
-
-        <!-- Logging (optionnel, mais recommandé) -->
+        <!-- Logging (optionnel mais recommandé) -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version> 1.5.16</version>
+            <version>1.5.16</version>
         </dependency>
     </dependencies>
 

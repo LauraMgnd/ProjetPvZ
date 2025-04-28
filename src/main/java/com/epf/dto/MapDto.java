@@ -1,9 +1,18 @@
 package com.epf.dto;
 
+import jakarta.validation.constraints.NotNull;
+
 public class MapDto {
+
+    @NotNull(message = "ID Map cannot be null")
     private int id_map;
+
+    @NotNull(message = "Line cannot be null")
     private int ligne;
+
+    @NotNull(message = "Column cannot be null")
     private int colonne;
+
     private String chemin_image;
 
     public MapDto() {}

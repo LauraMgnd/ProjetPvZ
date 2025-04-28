@@ -1,7 +1,13 @@
-com\epf\dao\ZombieDAOTest.class
 com\epf\service\MapServiceTest.class
+com\epf\mapper\MapMapperTest.class
+com\epf\controller\PlanteControllerTest.class
+com\epf\mapper\PlanteMapperTest.class
+com\epf\dao\PlanteDAOTest.class
+com\epf\service\PlanteServiceTest.class
+com\epf\controller\ZombieControllerTest.class
+com\epf\dao\ZombieDAOTest.class
+com\epf\mapper\ZombieMapperTest.class
+com\epf\controller\MapControllerTest.class
 com\epf\service\ZombieServiceTest.class
 com\epf\dao\MapDAOTest.class
 com\epf\config\DataSourceConfigTest.class
-com\epf\dao\PlanteDAOTest.class
-com\epf\service\PlanteServiceTest.class

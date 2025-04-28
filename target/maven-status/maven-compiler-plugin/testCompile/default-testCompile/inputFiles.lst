@@ -1,8 +1,13 @@
 C:\Users\Laura Mgnd\ProjetPvZ\src\test\java\com\epf\config\DataSourceConfigTest.java
+C:\Users\Laura Mgnd\ProjetPvZ\src\test\java\com\epf\controller\MapControllerTest.java
+C:\Users\Laura Mgnd\ProjetPvZ\src\test\java\com\epf\controller\PlanteControllerTest.java
 C:\Users\Laura Mgnd\ProjetPvZ\src\test\java\com\epf\controller\ZombieControllerTest.java
 C:\Users\Laura Mgnd\ProjetPvZ\src\test\java\com\epf\dao\MapDAOTest.java
 C:\Users\Laura Mgnd\ProjetPvZ\src\test\java\com\epf\dao\PlanteDAOTest.java
 C:\Users\Laura Mgnd\ProjetPvZ\src\test\java\com\epf\dao\ZombieDAOTest.java
+C:\Users\Laura Mgnd\ProjetPvZ\src\test\java\com\epf\mapper\MapMapperTest.java
+C:\Users\Laura Mgnd\ProjetPvZ\src\test\java\com\epf\mapper\PlanteMapperTest.java
+C:\Users\Laura Mgnd\ProjetPvZ\src\test\java\com\epf\mapper\ZombieMapperTest.java
 C:\Users\Laura Mgnd\ProjetPvZ\src\test\java\com\epf\service\MapServiceTest.java
 C:\Users\Laura Mgnd\ProjetPvZ\src\test\java\com\epf\service\PlanteServiceTest.java
 C:\Users\Laura Mgnd\ProjetPvZ\src\test\java\com\epf\service\ZombieServiceTest.java

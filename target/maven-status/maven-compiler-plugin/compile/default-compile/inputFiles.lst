@@ -14,6 +14,8 @@ C:\Users\Laura Mgnd\ProjetPvZ\src\main\java\com\epf\dao\ZombieDAOImpl.java
 C:\Users\Laura Mgnd\ProjetPvZ\src\main\java\com\epf\dto\MapDto.java
 C:\Users\Laura Mgnd\ProjetPvZ\src\main\java\com\epf\dto\PlanteDto.java
 C:\Users\Laura Mgnd\ProjetPvZ\src\main\java\com\epf\dto\ZombieDto.java
+C:\Users\Laura Mgnd\ProjetPvZ\src\main\java\com\epf\exception\EntityNotFoundException.java
+C:\Users\Laura Mgnd\ProjetPvZ\src\main\java\com\epf\exception\GlobalExceptionHandler.java
 C:\Users\Laura Mgnd\ProjetPvZ\src\main\java\com\epf\Main.java
 C:\Users\Laura Mgnd\ProjetPvZ\src\main\java\com\epf\mapper\MapMapper.java
 C:\Users\Laura Mgnd\ProjetPvZ\src\main\java\com\epf\mapper\PlanteMapper.java
