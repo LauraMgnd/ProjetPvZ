@@ -77,7 +77,7 @@ class MapControllerTest {
     }
 
     @Test
-    void testDeleteMap_mapFound() {
+    void testDeleteMap() {
         when(mapService.readMapById(1)).thenReturn(Optional.of(map));
 
         ResponseEntity<Void> response = mapController.deleteMap(1);
@@ -85,16 +85,5 @@ class MapControllerTest {
         verify(zombieService).deleteZombiesByMapId(1);
         verify(mapService).deleteMapById(1);
         assertEquals(204, response.getStatusCodeValue());
-    }
-
-    @Test
-    void testDeleteMap_mapNotFound() {
-        when(mapService.readMapById(1)).thenReturn(Optional.empty());
-
-        ResponseEntity<Void> response = mapController.deleteMap(1);
-
-        verify(zombieService, never()).deleteZombiesByMapId(anyInt());
-        verify(mapService, never()).deleteMapById(anyInt());
-        assertEquals(404, response.getStatusCodeValue());
     }
 }

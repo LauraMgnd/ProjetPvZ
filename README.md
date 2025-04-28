@@ -42,6 +42,8 @@ L'application backend permet de gérer la création, la modification, la suppres
 
 - **Gestion des exceptions** : Implémentation d'une gestion centralisée des exceptions pour gérer les erreurs de manière cohérente dans toute l'application.
 - **Validation des données** : Utilisation des mécanismes de validation avancée de Spring pour garantir que les données envoyées sont correctes avant d'effectuer des opérations (par exemple, validation des champs des entités via des annotations comme `@NotNull`, `@Size`, etc.).
+- **Logging** : Utilisation de **Logback** pour enregistrer les événements importants de l'application, tels que les erreurs, les actions des utilisateurs et d'autres événements critiques.
+
 
 - **Architecture en couches** : Le projet suit l'architecture en couches classique avec un modèle **Controller → Service → DAO → Model**.
 - **Sécurisation CORS** : Configuré pour permettre les appels API depuis le frontend React sur `http://localhost:5173`.
